@@ -1,7 +1,8 @@
 // <usage overhaul>.<breaking code change (including fixes)>.<user facing addition>
 ThisBuild / version := "0.17.2"
 ThisBuild / organization := "be.adamv"
-ThisBuild / scalaVersion := "3.2.1-RC1-bin-20220904-b5fea82-NIGHTLY"
+//ThisBuild / scalaVersion := "3.2.1-RC1-bin-20220904-b5fea82-NIGHTLY"
+ThisBuild / scalaVersion := "3.3.1"
 
 val publishSettings = Seq(
   publishTo := Some(Resolver.file("local-ivy", file("~"))),
@@ -12,7 +13,7 @@ lazy val root = project.in(file("."))
   .settings(
     name := "macroloop",
     compileOrder := CompileOrder.JavaThenScala,
-    publish / skip := true
+    //publish / skip := true
   )
 
 lazy val core = project.in(file("core"))
